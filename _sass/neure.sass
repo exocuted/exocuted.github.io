@@ -1,0 +1,69 @@
+$kolore-nagusia : #9b4dca
+$kolore-nagusi2:  #531875
+$information-phone: "only screen and (max-width : 400px)"
+
+.todo-portada
+	height: 100vh
+	width: 100%
+	background: linear-gradient(to bottom right, $kolore-nagusia, $kolore-nagusi2)
+	display: flex
+	justify-content: center
+	align-items: center
+	transition: all 400ms ease-in
+
+	@media #{$information-phone}
+		height: 360vh
+	
+
+	*
+		color: white
+
+	.content-portada
+		text-align: center
+		// height: 500px
+
+		h1
+			font-size: 5rem
+		p
+			font-size: 2rem
+
+	.zerbitzuak
+		z-index: 999
+		h2
+			font-size: 2.5rem
+		p
+			font-size: 1.7rem
+	
+	.social-wrapper
+		margin-top: 60px
+
+		i
+			font-size: 5rem
+
+			&:hover
+				color: #D5D5D5 !important
+
+.portada-color-1
+	background: linear-gradient(to bottom right, #4ACB5F, #418737) !important
+	transition: all 400ms ease-in
+
+.portada-color-2
+	background: linear-gradient(to bottom right, #2BB4E9, #2E74CA) !important
+	transition: all 400ms ease-in
+
+.portada-color-3
+	background: linear-gradient(to bottom right, #E9972B, #F45317) !important
+	transition: all 400ms ease-in
+	
+#overlay-portada
+	position: absolute
+	margin-top: 30px
+	background-color: #56BD63
+	width: 100%
+	height: 100vh
+	opacity: 0
+	transition: opacity 200ms ease-in-out
+
+.column
+	@media #{$information-phone}
+		max-width: 100% !important

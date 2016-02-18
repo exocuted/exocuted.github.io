@@ -1,0 +1,58 @@
+---
+layout: portada
+---
+
+  <div id="overlay-portada"></div>
+  <div class="todo-portada" id="tp">
+      <div class="content-portada">
+		<div class="container">
+			<h1>Howdy! I'm Eneko Sarasola</h1>
+			<p>also known as <strong>exocuted</strong>, a full-stack developer and sysadmin in Barcelona. I make your project stand off on the internet, by using programming in an effective and creative way.</p>
+			<div class="zerbitzuak row">
+				<div class="column column-33">
+					<h2>Frontend development</h2>
+					<p>I develop minimalist, beautiful and usable user experiences for the web. Conversion is easier if people find your site attractive and easy to use. My projects are made of clean and readable code that is future-proof, and reusable. I can use a number of framework that will make your project stand off the others.</p>
+				</div>
+				<div class="column column-33">
+					<h2>Backend development</h2>
+					<p>I create escalable, secure and concise APIs that are easy to use and standards-compliant. The tools I use are Node and Laravel, which provide a solid foundation of the most common webapp features, always taking into account performance and scalability.</p>
+				</div>
+				<div class="column column-33">
+					<h2>System administration</h2>
+					<p>I setup and maintain the home for your project. As a certified Linux expert (LPIC-1), I'm able to configure and optimize a Linux server to make sure your product is always available and feels snappy. Having a well-prepared environment is a key factor for succeeding on the net.</p>
+				</div>
+			</div>
+			<div class="social-wrapper">
+				<div class="row">
+					<div class="column social-box"><a href="http://twitter.com/exocuted"><i class="social icon-social-twitter"></i></a></div>
+					<div class="column social-box"><a href="https://es.linkedin.com/in/enekosarasola"><i class="social icon-social-linkedin"></i></a></div>
+					<div class="column social-box"><a href="https://plus.google.com/103580881988909141161"><i class="social icon-social-gplus"></i></a></div>
+					<div class="column social-box"><a href="https://www.instagram.com/extructed/"><i class="social icon-social-instagram"></i></a></div>
+					<div class="column social-box"><a href="https://www.youtube.com/channel/UCUWdzj0b0Nwh5yQo4tHPxHA"><i class="social icon-social-youtube"></i></a></div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+  </div>
+<script>
+var tp = document.getElementById('tp');
+var overlay = document.getElementById('overlay-portada');
+var clases = ['', 'portada-color-1', 'portada-color-2', 'portada-color-3'];
+var colores = ['linear-gradient(to bottom right, #9b4dca, #531875)', 'linear-gradient(to bottom right, #4ACB5F, #418737)', 'linear-gradient(to bottom right, #2BB4E9, #2E74CA)', 'linear-gradient(to bottom right, #9b4dca, #531875)'];
+var activo = 0;
+setInterval(function() {
+	overlay.style.background = colores[activo];
+	activo++;
+	overlay.style.opacity = "1";
+	setTimeout(function() {
+		overlay.style.opacity = "0";
+		if(activo > 3) {
+			activo = 0;
+		}
+		console.log(activo);
+		tp.className = "todo-portada " + clases[activo];
+	}, 150);
+	
+}, 5000);
+</script>
